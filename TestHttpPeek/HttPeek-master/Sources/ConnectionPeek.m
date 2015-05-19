@@ -1,5 +1,5 @@
 
-
+#ifdef KCONNECTIONPEEK_HOOK
 //
 HOOK_MESSAGE(id, NSURLConnection, initWithRequest_delegate_, NSURLRequest *request, id delegate)
 {
@@ -38,3 +38,4 @@ HOOK_MESSAGE(void *, NSURLConnection, start)
 	_LogRequest([self currentRequest]);
 	return ret;
 }
+#endif

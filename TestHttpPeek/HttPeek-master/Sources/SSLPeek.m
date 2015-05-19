@@ -1,6 +1,7 @@
 
 #define HOOK_SECURITY(RET, ...) HOOK_FUNCTION(RET, /System/Library/Frameworks/Security.framework/Security, __VA_ARGS__)
 
+#ifdef KSSLPEEK_HOOK
 //
 HOOK_SECURITY(OSStatus, SSLRead, SSLContextRef context, void *data, size_t dataLength, size_t *processed)
 {
@@ -43,3 +44,5 @@ HOOK_SECURITY(OSStatus, SSLHandshake, SSLContextRef context)
 	OSStatus ret = _SSLHandshake(context);
     return (ret == errSSLServerAuthCompleted) ? _SSLHandshake(context) : ret;
 }
+
+#endif

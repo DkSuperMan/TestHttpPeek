@@ -1,5 +1,13 @@
 
 #define TEST
+
+#define KSSLPEEK_HOOK
+//#define KWEBVIEWPEEK_HOOK
+//#define KAPPLICATIONPEEK_HOOK
+//#define KCONNECTIONPEEK_HOOK
+//#define KNOTIFICATIONPEEK_HOOK
+//#define KREADSTREAMPEEK_HOOK
+
 #import "Macro.h"
 
 #ifdef __OBJC__

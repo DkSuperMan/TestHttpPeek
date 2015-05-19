@@ -1,5 +1,5 @@
 
-
+#ifdef KWEBVIEWPEEK_HOOK
 //
 @interface WebViewDelegate : NSObject <UIWebViewDelegate>
 
@@ -96,3 +96,5 @@ HOOK_MESSAGE(void, UIWebView, loadRequest_, NSURLRequest *request)
 	LogWebView(self);
 	_UIWebView_loadRequest_(self, sel, request);
 }
+
+#endif

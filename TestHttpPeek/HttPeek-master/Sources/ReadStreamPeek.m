@@ -1,4 +1,5 @@
 
+#ifdef KREADSTREAMPEEK_HOOK
 //
 HOOK_FUNCTION(CFReadStreamRef, /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation, CFReadStreamCreateForHTTPRequest, CFAllocatorRef alloc, CFHTTPMessageRef request)
 {
@@ -12,3 +13,4 @@ HOOK_FUNCTION(CFDictionaryRef, /System/Library/Frameworks/CoreFoundation.framewo
 	NSLog(@"%s: %p", __FUNCTION__, request);
 	return _CFURLRequestCopyAllHTTPHeaderFields(request);
 }
+#endif
