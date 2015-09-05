@@ -264,12 +264,14 @@
 		24CADA9B1510492B00B22162 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DYLIB_INSTALL_NAME_BASE = "@executable_path/";
 			};
 			name = Debug;
 		};
 		24CADA9C1510492B00B22162 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DYLIB_INSTALL_NAME_BASE = "@executable_path/";
 			};
 			name = Release;
 		};
